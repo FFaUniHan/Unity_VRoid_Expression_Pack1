@@ -6,8 +6,9 @@ using TMPro;
 
 public class UIButtonInOne : MonoBehaviour
 {
-    [SerializeField] private Sprite emoticon;
     [SerializeField] private string text;
+    [SerializeField] private Sprite emoticon;
+    public AnimationClip anim;
 
     [Header("References")]
     [SerializeField] private UIExpressionControl exc;
@@ -23,8 +24,11 @@ public class UIButtonInOne : MonoBehaviour
         if(image != null)
             image.sprite = emoticon;
 
-        if(tmp != null)
+        if (tmp != null)
+        {
             tmp.text = text;
+            gameObject.name = "Button " + text;
+        }
 
         if(button != null)
             button.onClick.AddListener(() => exc.SetExpression(text));
