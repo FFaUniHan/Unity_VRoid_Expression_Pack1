@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class UIButtonArrange : MonoBehaviour
 {
+    [SerializeField] private string title;
     [SerializeField] private Grid grid;
     [SerializeField] private List<GameObject> buttons;
 
