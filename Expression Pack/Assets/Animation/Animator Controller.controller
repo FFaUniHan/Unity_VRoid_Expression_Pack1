@@ -89,6 +89,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tex: {fileID: 2800000, guid: 65a945319b43cc149bfa0686d3145c7b, type: 3}
+  delayTimer: 0
 --- !u!1107 &-8797643260926027419
 AnimatorStateMachine:
   serializedVersion: 6
@@ -106,22 +107,22 @@ AnimatorStateMachine:
     m_Position: {x: -110, y: 330, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2945801492356181562}
-    m_Position: {x: 310, y: 280, z: 0}
+    m_Position: {x: 310, y: 330, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3952736420275783066}
-    m_Position: {x: 310, y: 380, z: 0}
+    m_Position: {x: 310, y: 430, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3486536473497279468}
     m_Position: {x: -110, y: 280, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -9037124230416331541}
-    m_Position: {x: -110, y: 480, z: 0}
+    m_Position: {x: 100, y: 480, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6708978837529667588}
     m_Position: {x: 100, y: 430, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7195932573954696157}
-    m_Position: {x: -110, y: 430, z: 0}
+    m_Position: {x: -110, y: 480, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 687278340440840659}
     m_Position: {x: 100, y: 280, z: 0}
@@ -136,22 +137,22 @@ AnimatorStateMachine:
     m_Position: {x: 100, y: 380, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -446212724699188068}
-    m_Position: {x: 100, y: 480, z: 0}
+    m_Position: {x: 310, y: 280, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4055800908428385586}
-    m_Position: {x: 310, y: 330, z: 0}
+    m_Position: {x: 310, y: 380, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1230396154157585197}
-    m_Position: {x: 310, y: 430, z: 0}
+    m_Position: {x: 310, y: 480, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8181870004331856009}
-    m_Position: {x: 310, y: 480, z: 0}
+    m_Position: {x: 520, y: 330, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -133518279793833873}
     m_Position: {x: 520, y: 280, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3842027481814602503}
-    m_Position: {x: 520, y: 330, z: 0}
+    m_Position: {x: 520, y: 380, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -770906982478241936}
     m_Position: {x: 1180, y: 430, z: 0}
@@ -182,6 +183,9 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 3980617952880909313}
     m_Position: {x: 970, y: 480, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 3531521541837205623}
+    m_Position: {x: -110, y: 430, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 8786987277351768724}
@@ -212,6 +216,7 @@ AnimatorStateMachine:
   - {fileID: 5757599457376302602}
   - {fileID: 8241039035451632527}
   - {fileID: 6070260656592030771}
+  - {fileID: 4475776860980666868}
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
@@ -323,6 +328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tex: {fileID: 2800000, guid: 7fe45f9b60c865746959b3fe40631c70, type: 3}
+  delayTimer: 0
 --- !u!1102 &-6708978837529667588
 AnimatorState:
   serializedVersion: 6
@@ -1042,6 +1048,12 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
+  - m_Name: Crazy
+    m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
   - m_Name: Cringe
     m_Type: 9
     m_DefaultFloat: 0
@@ -1390,6 +1402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tex: {fileID: 2800000, guid: b7a085fd07036f849bfdf7c2bd5ebe7a, type: 3}
+  delayTimer: 0
 --- !u!1101 &2229000096787667188
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -1543,6 +1556,32 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1102 &3531521541837205623
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Expression Crazy
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: f858ed9ab0871aa44b2398bb6635e620, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1102 &3980617952880909313
 AnimatorState:
   serializedVersion: 6
@@ -1649,6 +1688,31 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!1101 &4475776860980666868
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: Crazy
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 3531521541837205623}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1101 &4713926174833203806
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -1839,6 +1903,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tex: {fileID: 2800000, guid: 50468677a24dbb847916c068eb2dc2ec, type: 3}
+  delayTimer: 0
 --- !u!114 &6656779384072416689
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1852,6 +1917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tex: {fileID: 2800000, guid: eb067ee5ccee4af4c920e3164140f8ed, type: 3}
+  delayTimer: 0
 --- !u!114 &6732978268173817919
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1864,7 +1930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 244029fd3c81cdc43be6aebde5f296cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tex: {fileID: 2800000, guid: 5ce9f91f768fba94eaa9e0790a56030c, type: 3}
+  tex: {fileID: 2800000, guid: 27f151f9d97c4ee42bed757cdb20e310, type: 3}
   delayTimer: 0.25
 --- !u!1102 &6870182008443561922
 AnimatorState:
@@ -1919,7 +1985,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 244029fd3c81cdc43be6aebde5f296cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tex: {fileID: 2800000, guid: 2bcb627b525af8043b144554fa10a7be, type: 3}
+  tex: {fileID: 2800000, guid: 5ce9f91f768fba94eaa9e0790a56030c, type: 3}
   delayTimer: 0.25
 --- !u!1102 &7195932573954696157
 AnimatorState:
