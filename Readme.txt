@@ -5,7 +5,7 @@ You don't need to use every scripts in this project. Most of the expressions are
 
 
 This project uses 6 scripts:
-- UIExpressionControl.cs is used in the UI Button to trigger a new expression animation and to create particle effects.
+- UIExpressionControl.cs is used in the UI Button to trigger a new expression animation and to create particle effects. All of it is triggered by a function called in the Button UI Event.
 
 - ExpressionManager.cs is used for swapping face and eye textures. 
 

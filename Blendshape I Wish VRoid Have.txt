@@ -1,6 +1,7 @@
 - Separate Eyebrows Raising
 - Clenched Teeth
 - Tongue Cheeky
+- Separate Iris Size
 
 THINGS TO DO
 - Documentation
